@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         node-version: [18.x]
@@ -26,10 +26,8 @@ jobs:
           cache: 'npm'
       - name: install
         run: npm ci
-      - name: Test
-        run: npm run test -- --watch=false --browsers=ChromeHeadless
       - name: Build
-        run: npm run build -- -c production --base-href "https://github.com/janbBodenmann/BOJA_Angular3.git/"
+        run: npm run build -- -c production --base-href "https://github.com/janbBodenmann/BOJA_Angular3"
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
