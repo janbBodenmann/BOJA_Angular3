@@ -29,7 +29,7 @@ jobs:
       - name: Test
         run: npm run test -- --watch=false --browsers=ChromeHeadless
       - name: Build
-        run: npm run build -- -c production --base-href "https://janbBodenmann.github.io/BOJA_Angular3/"
+        run: npm run build -- -c production --base-href "https://janbBodenmann.github.io/BOJA_Angular3/todoList"
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
